@@ -1,4 +1,4 @@
-# Vagrant::Host::Path
+# Vagrant::HostPath
 
 This plugin creates an environment variable (`VAGRANT_HOST_PATH` by default) with the path to the project's root dir on your host machine.
 You can just replace `/vagrant` prefix of any file in your VM with the value of `VAGRANT_HOST_PATH` and you'll get the path to that same file on the host.
