@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["mike-n@narod.ru"]
   gem.description   = %q{Vagrant plugin that stores the host path to your project in the environment variable in the VM.}
   gem.summary       = %q{The host path to your project in the environment variable in the VM for Vagrant.}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/MOZGIII/vagrant-host-path"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
