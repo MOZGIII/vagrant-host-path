@@ -22,7 +22,7 @@ Or if you installed it with an installer:
     ...
     $ vagrant ssh  # or any other way you connect to the VM
 
-And after that you cat use the env var within your VM:
+And after that you can use the env var within your VM:
 
     Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic-pae i686)
 
