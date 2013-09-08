@@ -1,21 +1,23 @@
-# -*- encoding: utf-8 -*-
+# coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'vagrant-host-path/version'
 
-Gem::Specification.new do |gem|
-  gem.name          = "vagrant-host-path"
-  gem.version       = Vagrant::HostPath::VERSION
-  gem.authors       = ["MOZGIII"]
-  gem.email         = ["mike-n@narod.ru"]
-  gem.description   = %q{Vagrant plugin that stores the host path to your project in the environment variable in the VM.}
-  gem.summary       = %q{The host path to your project in the environment variable in the VM for Vagrant.}
-  gem.homepage      = "https://github.com/MOZGIII/vagrant-host-path"
+Gem::Specification.new do |spec|
+  spec.name          = "vagrant-host-path"
+  spec.version       = VagrantPlugins::HostPath::VERSION
+  spec.authors       = ["MOZGIII"]
+  spec.email         = ["mike-n@narod.ru"]
+  spec.description   = %q{Vagrant plugin that stores the host path to your project in the environment variable in the VM.}
+  spec.summary       = %q{The host path to your project in the environment variable in the VM for Vagrant.}
+  spec.homepage      = "https://github.com/MOZGIII/vagrant-host-path"
+  spec.license       = "MIT"
 
-  gem.files         = `git ls-files`.split($/)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.require_paths = ["lib"]
+  spec.files         = `git ls-files`.split($/)
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ["lib"]
 
-  gem.add_dependency "vagrant", "~> 1.0.7"
+  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "rake"
 end

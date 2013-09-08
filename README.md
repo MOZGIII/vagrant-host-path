@@ -1,4 +1,4 @@
-# Vagrant::HostPath
+# Vagrant Host Path
 
 This plugin creates an environment variable (`VAGRANT_HOST_PATH` by default) with the path to the project's root dir on your host machine.
 You can just replace `/vagrant` prefix of any file in your VM with the value of `VAGRANT_HOST_PATH` and you'll get the path to that same file on the host.
@@ -38,13 +38,13 @@ And after that you can use the env var within your VM:
 Vagrant::Config.run do |config|
   
   # The environment key to set
-  config.host-path.env_key = "VAGRANT_HOST_PATH"
+  config.host_path.env_key = "VAGRANT_HOST_PATH"
 
   # Temp file to save path to
-  config.host-path.path_file = "/tmp/.vagrant-host-path"
+  config.host_path.path_file = "/tmp/.vagrant-host-path"
 
   # Profile script path
-  config.host-path.profile_path = "/etc/profile.d/vagrant-host-path.sh"
+  config.host_path.profile_path = "/etc/profile.d/vagrant-host-path.sh"
 end
 ```
 
