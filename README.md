@@ -11,7 +11,7 @@ If you're using Vagrant with ruby's gem:
 
 Or if you installed it with an installer:
 
-    $ vagrant gem install vagrant-host-path
+    $ vagrant plugin install vagrant-host-path
 
 ## Usage
 
