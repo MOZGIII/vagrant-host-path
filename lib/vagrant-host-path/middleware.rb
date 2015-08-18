@@ -26,6 +26,7 @@ module VagrantPlugins
       end
 
       def setup
+        return unless config.enabled
         put_path_file(config, @machine.env.cwd)
         put_profile_file(config)
         @machine.ui.success "Host Path set!"

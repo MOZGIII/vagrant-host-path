@@ -2,12 +2,18 @@ module VagrantPlugins
   module HostPath
     module Legacy
       class Config < Vagrant::Config::Base
+        attr_writer :enabled
         attr_writer :env_key
         attr_writer :path_file
         attr_writer :profile_path
         attr_writer :temp_upload_path
 
         # FIXME: Defaults duplication here!
+
+        def enabled
+          return true if @enabled.nil?
+          @enabled
+        end
 
         def env_key
           @env_key || "VAGRANT_HOST_PATH"
