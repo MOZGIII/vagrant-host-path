@@ -36,15 +36,21 @@ And after that you can use the env var within your VM:
 
 ```ruby
 Vagrant::Config.run do |config|
-  
-  # The environment key to set
-  config.host_path.env_key = "VAGRANT_HOST_PATH"
 
-  # Temp file to save path to
-  config.host_path.path_file = "/tmp/.vagrant-host-path"
+  if Vagrant.has_plugin?("vagrant-host-path")
+    # Enable or disable plugin (enabled by default)
+    config.host_path.enabled = true
+    
+    # The environment key to set
+    config.host_path.env_key = "VAGRANT_HOST_PATH"
 
-  # Profile script path
-  config.host_path.profile_path = "/etc/profile.d/vagrant-host-path.sh"
+    # Temp file to save path to
+    config.host_path.path_file = "/tmp/.vagrant-host-path"
+
+    # Profile script path
+    config.host_path.profile_path = "/etc/profile.d/vagrant-host-path.sh"
+  end
+
 end
 ```
 
